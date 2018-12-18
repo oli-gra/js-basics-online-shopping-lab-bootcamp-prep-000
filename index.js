@@ -29,13 +29,19 @@ function puncitemsincart() {
   if
 }
 
+function stringItems(i) {
+  var items
+  items=items+`${cart[i].itemName} at $${cart[i].itemPrice}`
+  return items
+}
+
 function viewCart() {
-  var i=0,n=cart.length,itemsincart=""
+  var i=0,n=cart.length,items=""
   if (n===0) {
     return "Your shopping cart is empty." 
   } else {
-    if (n=1) {
-      itemsincart=`${cart[i].itemName} at $${cart[i].itemPrice}.`
+    while (n-i>1) stringItems(i)
+    if (n-i=1) items=items+`${cart[i].itemName} at $${cart[i].itemPrice}, `
     }
     else {
       for (i=0;i<n;i++) {
