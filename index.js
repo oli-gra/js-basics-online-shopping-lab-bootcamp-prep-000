@@ -50,13 +50,13 @@ function removeFromCart(item) {
   var i=0,n=cart.length,foundItem=false
   if (n>0) {
     while (foundItem===false&&i<n) {
-      i++
       if (item==cart[i].itemName)
       {
         foundItem=true
         cart.splice(i,1)
         return cart
       }
+      i++
     }
     if (i=n&&foundItem===false) return "That item is not in your cart."
   } else return "Your shopping cart is empty."
