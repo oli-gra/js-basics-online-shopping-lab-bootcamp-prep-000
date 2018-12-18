@@ -58,7 +58,6 @@ function removeFromCart(item) {
       }
       i++
     }
-    if (i==n&&foundItem===false) return "That item is not in your cart."
   } else return "That item is not in your cart."
 }
 
