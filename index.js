@@ -22,7 +22,9 @@ function addToCart(item) {
 function viewCart() {
   var i,n=cart.length,itemsincart=""
   function puncitem(i) {
-    if (n-i>0) return ","
+    if (n-i=0) return "."
+    if (n-i=1) return ",and "
+    if (n-i>1) return ", "
   }
   if (n===0) {
     return "Your shopping cart is empty." 
